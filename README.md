@@ -9,9 +9,10 @@
 - **GSAP (Coming Soon):** Smooth animations and transitions.
 
 **Installation:**
-1. Clone the repository: `git clone https://github.com/your-username/portfolio-demo.git`
-2. Navigate to the project directory: `cd portfolio-demo`
-3. Open `index.html` in your browser or set up a local development server.
+1. Clone the repository: `git clone https://github.com/your-username/portfolio-demo.git`.
+2. Navigate to the project directory: `cd portfolio-demo`.
+3. Run `npm i` or `npm install` to install dependencies.
+4. Open `index.html` in your browser or set up a local development server.
 
 **Usage:**
 Customize with your projects, skills, and information. Update HTML, CSS, and add projects to showcase your work.
