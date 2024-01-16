@@ -6,27 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DARKX.UI</title>
     <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="h-screen scrollbar-hide">
+<body class="h-screen w-screen scrollbar-hide smooth-scroll scroll-smooth">
 
-    <header class="">
+    <header class="relative z-40">
         <div class="nav-bar text-white">
             <div
-                class="nav-belt subpixel-antialiased flex justify-between items-center my-8 mx-28 max-lg:mx-12  max-sm:justify-between max-sm:my-5">
+                class="nav-belt subpixel-antialiased flex justify-between items-center my-8 mx-28 max-sm:mx-5 max-lg:mx-12 max-sm:justify-between max-sm:my-5">
                 <div class="font-bold text-4xl">Darkx.dev</div>
-                <div id="nav-dropdown">
-                    <button>
-                        <svg hidden class="w-5 h-5 ml-2 -mr-1 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <div id="nav-dropdown " class="relative">
+                    <button onclick="handleDropdown()" class="sm:hidden">
+                        <svg class="w-5 h-5 ml-2 -mr-1 text-" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7" />
                         </svg>
                     </button>
-                    <ul class="routes text-lg flex gap-10 max-sm:hidden">
+                    <ul id="nav-routes"
+                        class="routes text-nowrap text-lg flex gap-10 max-sm:-translate-y-80 max-sm:p-5 max-sm:flex-col transition-all overflow-hidden max-sm:bg-[#17171761] max-sm:backdrop-blur-sm rounded-md max-sm:shadow-xl shadow-slate-400 max-sm:w-[50vw] z-20 max-sm:absolute right-0 mt-5">
                         <li class="hover:text-[#27AE60] transition-colors cursor-pointer">About me</li>
                         <li class="hover:text-[#27AE60] transition-colors cursor-pointer">Services</li>
                         <li class="hover:text-[#27AE60] transition-colors cursor-pointer">Contact me</li>
@@ -36,9 +36,9 @@
         </div>
     </header>
 
-    <main id="main" class="min-h-screen">
+    <main id="main" class="min-h-screen smooth-scroll">
         <section
-            class="flex max-sm:flex-col-reverse items-center justify-around max-sm:justify-center max-sm:gap-24 px-10 max-sm:px-2 mb-12 min-h-[80vh] snap-start"
+            class="flex overflow-hidden max-sm:flex-col-reverse items-center justify-around max-sm:justify-center max-sm:gap-24 px-10 max-sm:px-2 mb-12 min-h-[80vh] "
             id="home">
             <div class="space-y-6 max-sm:space-y-3">
                 <h1 class="text-5xl max-sm:text-4xl text-white font-bold">
@@ -54,10 +54,10 @@
                     </a>
                 </div>
             </div>
-            <div class="rounded-full border border-[#202020] max-sm:scale-90">
+            <div class="rounded-full relative z-10 border border-[#202020] max-sm:scale-90">
                 <div class=" rounded-full border-[20px] border-transparent">
                     <div class=" rounded-full">
-                        <div class="aspect-square rounded-full overflow-hidden">
+                        <div id="pfp-container" class="aspect-square rounded-full overflow-hidden ">
                             <img class="w-[95%]" alt="Logo" src="assets/image.png" />
                         </div>
                     </div>
@@ -65,7 +65,7 @@
             </div>
         </section>
 
-        <section class="text-white flex flex-col items-center w-4/5 max-sm:w-full mx-auto gap-10 pt-18">
+        <section class="text-white flex flex-col items-center w-4/5 max-sm:w-full mx-auto gap-10 pt-" id="about">
             <h1 class="text-5xl font-bold">About</h1>
             <p class="text-lg max-sm:text-base text-center w-2/3 max-sm:w-full max-lg:w-full px-10 max-sm:px-5">
                 As a frontend web developer, I am dedicated to transforming creative
@@ -101,7 +101,7 @@
             </ul>
         </section>
 
-        <section class="flex flex-col gap-16 items-center my-20 mx-auto">
+        <section class="flex flex-col gap-16 items-center py-20 mx-auto" id="what-i-do">
             <h1 class="text-5xl font-bold text-white">What i do</h1>
             <ul class="grid grid-cols-3 text-[#535353] text-4xl gap-20 max-xl:gap-8 max-lg:grid-cols-1 max-sm:gap-10 w-[80%] max-sm:w-10/12 font-medium"
                 id="what_i_do">
@@ -131,7 +131,7 @@
             </ul>
         </section>
 
-        <section class="flex flex-col gap-16 items-center mx-auto">
+        <section class="flex flex-col gap-16 items-center mx-auto" id="skills">
             <h1 class="text-5xl font-bold text-white">Skills</h1>
             <ul
                 class="grid gap-22 grid-cols-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-sm:space-y-10 max-lg:gap-20 font-bold text-center bg-[#212121] w-[80%] p-16 border border-[#333333]">
@@ -180,7 +180,7 @@
                 </button>
             </form>
             <div class="flex flex-col gap-4 items-center ">
-                <code class="text4F] text-white mt-20">
+                <code class="text-white mt-20">
                 @ Darkx 2023 • Developed by Roshan
               </code>
                 <a href="https://www.instagram.com/dark.dev.23/" target="_blank">
@@ -194,13 +194,12 @@
 
     </main>
 
-    <script src="locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
-        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
-        integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="locomotive-scroll.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
     <script src="app.js"></script>
 
 </body>
