@@ -21,7 +21,9 @@ Customize with your projects, skills, and information. Update HTML, CSS, and add
 - HTML
 - Tailwind CSS
 - JavaScript
-- GSAP (Coming Soon)
+- GSAP
+- Shery JS (Text Animations)
+- Locomotive (soon)
 
 **Contributing:**
 If you'd like to contribute, please follow the [contributing guidelines](CONTRIBUTING.md).
