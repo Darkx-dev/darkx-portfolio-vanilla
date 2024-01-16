@@ -22,6 +22,11 @@ const handleDropdown = () => {
 
 }
 
+Shery.textAnimate('#name span', {
+  style: 1,
+  duration: 1,
+  delay: 0.3
+})
 const tl = gsap.timeline()
 
 tl.from('.nav-belt, #nav-routes li', {
