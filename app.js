@@ -143,6 +143,5 @@ tl.from('#skills > ul li', {
     start: 'top 90%',
     end: 'center 70%',
     scrub: true,
-    markers: true
   }
 })
